@@ -4,7 +4,7 @@ function Task({ task, onTglStatus }) {
   const updateStatus = (e) => {
     const reqData = {
       id: e.id,
-      complete: e.completed,
+      complete: !e.completed,
     };
     updateTask(reqData).then((res) => {
       onTglStatus(task);

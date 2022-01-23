@@ -7,7 +7,7 @@ function TaskEdit({ task, onSaveTask }) {
 
   const saveTask = (e) => {
     e.preventDefault();
-    addTask({ desc: desc, date: date, complete: false }).then((res) => {
+    addTask({ description: desc, date: date, complete: false }).then((res) => {
       onSaveTask({ desc: desc, date: date });
       setDesc("");
       setDate("");

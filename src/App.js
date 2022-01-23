@@ -29,9 +29,10 @@ function App() {
   const [showTaskEdit, setShowTaskEdit] = useState(false);
 
   const onSaveTask = ({ desc, date }) => {
+  let index = tasks.length + 1;
     setTasks([
       {
-        id: Date.now(),
+        id: index,
         description: desc,
         date: date,
         completed: false,
